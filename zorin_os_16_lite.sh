@@ -45,6 +45,10 @@ rm -rf google-chrome-stable_current_amd64.deb
 
 cd ~
 
-
-
 echo "Softwares installed!"
+
+echo "Creating workspace folder..."
+
+mkdir ~/Workspace
+
+echo "Workspace folder created!"
