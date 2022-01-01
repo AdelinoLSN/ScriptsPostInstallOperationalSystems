@@ -18,4 +18,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
 /bin/zsh
 
+/bin/bash zsh_script_theme.sh
+
 echo "ZSH installed!"
