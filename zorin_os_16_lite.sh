@@ -52,3 +52,6 @@ echo "Creating workspace folder..."
 mkdir ~/Workspace
 
 echo "Workspace folder created!"
+
+# Otters
+/bin/bash zsh_script.sh
