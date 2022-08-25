@@ -53,6 +53,9 @@ wget https://raw.githubusercontent.com/AdelinoLSN/Scripts-Post-Install-OSs/main/
 rm .zshrc
 mv _temp/.zshrc .zshrc
 
+# VPN
+# sudo apt-get install openvpn network-manager-l2tp network-manager-l2tp-gnome apt-transport-https ca-certificates libreswan -y
+
 # Remove _temp
 cd /home/adelino
 rm -rf _temp
