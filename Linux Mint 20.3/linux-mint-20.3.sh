@@ -28,7 +28,10 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update && sudo apt-get install sublime-text -y
 
 # Visual Studio Code
-flatpak install com.visualstudio.code
+cd ~/_temp
+wget -c https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64 -c vscode
+sudo chmod 777 vscode
+sudo dpkg -i vscode
 
 # Instala o Grub Customizer
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
