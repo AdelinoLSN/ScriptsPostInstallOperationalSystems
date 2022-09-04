@@ -62,7 +62,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 
 # VPN
-# sudo apt-get install openvpn network-manager-l2tp network-manager-l2tp-gnome apt-transport-https ca-certificates libreswan -y
+sudo apt-get install openvpn network-manager-l2tp network-manager-l2tp-gnome apt-transport-https ca-certificates libreswan -y
 
 # Remove _temp
 cd /home/adelino
