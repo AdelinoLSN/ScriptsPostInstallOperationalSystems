@@ -56,6 +56,11 @@ wget https://raw.githubusercontent.com/AdelinoLSN/Scripts-Post-Install-OSs/main/
 rm .zshrc
 mv _temp/.zshrc .zshrc
 
+# Docker
+sudo apt install docker.io docker-compose
+sudo usermod -aG docker $USER
+newgrp docker
+
 # VPN
 # sudo apt-get install openvpn network-manager-l2tp network-manager-l2tp-gnome apt-transport-https ca-certificates libreswan -y
 
