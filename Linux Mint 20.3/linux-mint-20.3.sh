@@ -9,7 +9,7 @@ mkdir _temp
 sudo apt update
 
 # Remover programas que não serão utilizados
-sudo apt purge xed libreoffice* warpinator thunderbird* hexchat* celluloid rhythmbox* hypnotix -y
+sudo apt purge xed libreoffice* warpinator thunderbird* hexchat* celluloid rhythmbox* hypnotix timeshift -y
 
 # Atualiza os softwares que sobraram
 sudo apt update && sudo apt upgrade -y
