@@ -43,18 +43,30 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/Hack.zip -
 mkdir ~/.fonts && cd ~/.fonts
 unzip ~/_temp/Hack.zip
 
-# Baixa e configura o Zsh e o Oh My Zsh
-sudo apt install zsh -y && chsh -s $(which zsh)
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-# Baixa e copia o arquivo .zshrc para o local
-cd /home/adelino
-wget https://raw.githubusercontent.com/AdelinoLSN/Scripts-Post-Install-OSs/main/oh-my-zsh/.zshrc -P /home/adelino/_temp
-rm .zshrc
-mv _temp/.zshrc .zshrc
+# Baixa de configura Zsh
+sudo apt install -y git zsh
+chsh -s $(which zsh)
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
+echo 'source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+echo "source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+## Baixa e configura o Zsh e o Oh My Zsh
+#sudo apt install zsh -y && chsh -s $(which zsh)
+#sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+#git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+#git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+#git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+## Baixa e copia o arquivo .zshrc para o local
+#cd /home/adelino
+#wget https://raw.githubusercontent.com/AdelinoLSN/Scripts-Post-Install-OSs/main/oh-my-zsh/.zshrc -P /home/adelino/_temp
+#rm .zshrc
+#mv _temp/.zshrc .zshrc
 
 # Docker
 sudo apt install docker.io docker-compose
