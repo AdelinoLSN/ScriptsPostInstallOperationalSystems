@@ -19,7 +19,7 @@ sudo apt dist-upgrade -y && sudo apt autoremove -y
 sudo apt install ntfs-3g git wget curl apt-transport-https -y
 
 # Instala softwares desejados (GUI)
-sudo apt install gparted vlc -y
+sudo apt install gparted vlc baobab -y
 
 # Sublime Text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg
