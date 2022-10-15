@@ -14,7 +14,6 @@ sudo apt purge xed libreoffice* warpinator thunderbird* hexchat* celluloid rhyth
 # Atualiza os softwares que sobraram
 sudo apt update && sudo apt upgrade -y
 sudo apt dist-upgrade -y && sudo apt autoremove -y
-flatpak update
 
 # Instala softwares utilitários de linha de comando
 sudo apt install ntfs-3g git wget curl apt-transport-https -y
