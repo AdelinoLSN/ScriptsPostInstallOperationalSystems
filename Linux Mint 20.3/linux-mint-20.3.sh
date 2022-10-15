@@ -16,7 +16,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt dist-upgrade -y && sudo apt autoremove -y
 
 # Instala softwares utilitários de linha de comando
-sudo apt install ntfs-3g git wget curl apt-transport-https -y
+sudo apt install ntfs-3g git wget curl apt-transport-https rar unrar -y
 
 # Instala softwares desejados (GUI)
 sudo apt install gparted vlc baobab -y
